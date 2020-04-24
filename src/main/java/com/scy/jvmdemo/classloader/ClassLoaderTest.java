@@ -1,5 +1,7 @@
 package com.scy.jvmdemo.classloader;
 
+import sun.misc.Launcher;
+
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -40,5 +42,8 @@ public class ClassLoaderTest {
         //obj = Class.forName("com.scy.jvmdemo.classloader.ClassLoaderTest").newInstance();
 
         System.out.println(obj instanceof com.scy.jvmdemo.classloader.ClassLoaderTest);
+
+        System.out.println(ClassLoaderTest.class.getClassLoader().getClass().getName());
+        //Launcher
     }
 }
