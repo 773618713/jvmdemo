@@ -5,6 +5,8 @@ package com.scy.jvmdemo.bytecode.executionengine.methodcall;
  * 使用 invokevirtual 调用
  * 在编译阶段不能够确定方法是哪一个
  *
+ * 方法的重写使用动态分派。调用方法取决于实例类型（方法接收者）。
+ *
  */
 public class DynamicDispatch {
 
@@ -31,6 +33,7 @@ public class DynamicDispatch {
         Human women = new Women();
         man.sayHello();
         women.sayHello();
+
         man = new Women();
         man.sayHello();
     }
