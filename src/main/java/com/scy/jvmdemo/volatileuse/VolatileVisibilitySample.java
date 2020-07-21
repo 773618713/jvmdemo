@@ -28,7 +28,11 @@ public class VolatileVisibilitySample {
         }
 
         Thread threadB = new Thread(()->{
-           refresh();
+            //synchronized也不能保证其它线程可见性
+            synchronized(VolatileVisibilitySample.class) {
+                refresh();
+            }
+
         },"threadB");
         threadB.start();
     }
