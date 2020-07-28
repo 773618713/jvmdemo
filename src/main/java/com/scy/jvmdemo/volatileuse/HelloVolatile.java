@@ -7,14 +7,17 @@ package com.scy.jvmdemo.volatileuse;
  */
 public class HelloVolatile {
     public static volatile int i = 0;
+
     public static void main(String[] args) {
         for (int j = 0; j < 100000; j++) {
             m();
             n();
         }
     }
+
     public static synchronized void m() {
     }
+
     public static void n() {
         i++;
     }
