@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
  */
 public class VolatileVisibilitySample {
     private static Logger logger = LoggerFactory.getLogger(VolatileVisibilitySample.class);
-    private static boolean initFlag = false;
+    private static  boolean initFlag = false;
 
     public static void main(String[] args) {
         Thread threadA = new Thread(()->{
@@ -29,9 +29,9 @@ public class VolatileVisibilitySample {
 
         Thread threadB = new Thread(()->{
             //synchronized也不能保证其它线程可见性
-            synchronized(VolatileVisibilitySample.class) {
+            //synchronized(VolatileVisibilitySample.class) {
                 refresh();
-            }
+            //}
 
         },"threadB");
         threadB.start();
