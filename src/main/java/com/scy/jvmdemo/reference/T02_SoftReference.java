@@ -4,7 +4,8 @@ import java.lang.ref.SoftReference;
 
 /**
  * 软引用
- * 一旦内存被占满，垃圾回收器就会将其回收
+ * 一旦内存被占满，垃圾回收器就会将其回收。
+ * 实际应用，可以作为图片缓存。
  */
 public class T02_SoftReference {
     public static void main(String[] args) {
